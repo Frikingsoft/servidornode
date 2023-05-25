@@ -1,0 +1,69 @@
+<div class="menu">
+    <nav>
+        <button class="botones"><a href="/">Inicio</a></button>
+        <button class="botones"> <a href="/samba">Samba</a> </button>
+        <button class="botones"> <a href="/ssh">SSH</a> </button>
+        <button class="botones"> <a href="/login">Login</a> </button>
+        <button class="botones"> <a href="/registro">Registro</a> </button>
+    </nav>
+</div>
+
+
+<style>
+    .menu{
+        position: fixed;
+        width: 150px;
+        height: 100%;
+        
+    }
+    .menu nav{
+        width: 60px;
+        height: 100%;
+        background-color: rgb(16, 82, 130);
+        box-shadow: 2px 2px 2px rgb(188, 188, 188), 3px 3px 2px grey,
+        4px 4px 4px black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .botones{
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-bottom: 5px;
+        
+    }
+    .botones a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+    .botones:hover::after{
+        content: " ";
+        position: absolute;
+        width: 10px;
+        height: 40px;
+        margin-left: 60px;
+        background-color: rgb(16, 82, 130);
+        animation: animar .2s;
+        box-shadow: 2px 2px 2px rgb(188, 188, 188), 3px 3px 2px rgb(16, 82, 130),
+        4px 4px 4px black;
+        z-index: -1 !important;
+      
+    }
+    @keyframes animar {
+        from {
+            width: 0;
+        }
+        to{
+            width: 10px;
+        }
+    }
+</style>
