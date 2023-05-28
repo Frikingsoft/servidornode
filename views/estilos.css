@@ -4,3 +4,31 @@
     box-sizing: border-box;
  
 }
+.paginaCpu{
+    width: 87%;
+    height: 60vh;
+    margin: auto;
+    margin-top: 60px;
+    
+}
+
+.procesador{
+    width:40rem;
+    height: 40rem;
+    border: 4px double rgba(188, 185, 10, 0.725);
+    box-shadow: 2px 2px 2px rgb(188, 188, 188), 3px 3px 2px grey,
+        4px 4px 4px black;
+    overflow:scroll;   
+    margin-top: 20px; 
+}
+.cpu{
+    width: 100%;
+    
+}
+.cpu span{
+    display: flex;
+    font-size: 1.5rem;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

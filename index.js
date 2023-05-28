@@ -1,6 +1,7 @@
 const express = require('express') // Importo el módulo de express
 const servidor = express()        // Ejecuto el módulo de express
 const hbs = require('hbs')       // importo el módulo de hbs para el motor de plantillas
+const { arquitectura, cpus, SO,sistema  } = require('./views/Scripts/inicio')
 
 servidor.set('puerto', process.env.PORT || 80) // Creo la variable puerto que puede ser que use un puerto establecido en algún servidor o sino utiliza el puerto 80
 servidor.listen(servidor.get('puerto'))        // El servidor escucha en el puerto establecido
@@ -10,7 +11,12 @@ servidor.use(express.static(`${__dirname}/views`))                 // Le indico 
 hbs.registerPartials(`${__dirname}/views/partials`)                // Registro los partials, son archivos que van a estar presentes en multiples vistas
 
 servidor.get('/',(req,res)=>{
-    res.render('index')
+    res.render('index',{ 
+        arquitectura,
+        cpus,
+        SO,
+        sistema
+    })
 })
 
 servidor.get('/samba',(req,res)=>{

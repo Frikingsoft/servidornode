@@ -10,7 +10,24 @@
 <body>
     {{> titulo }}
     {{>  menu  }}
-    <h1>coso</h1>
+    <div class="paginaCpu">
+        <h1> 
+            Arquitectura : {{ arquitectura }} Sistema Operativo : {{ SO }}
+            Sistema Operativo : {{ sistema }}
+        </h1>
+        <div class="procesador">
+            <div class="cpu">
+                 {{#each cpus}}
+                    <span> Modelo: {{ this.model}}</span>
+                    <span> Frecuencia : {{ this.speed}}</span>
+                    <span> IRQ : {{this.times.irq}}</span>
+                    <hr/>               
+                {{/each}}
+            </div> 
+           
+        </div>
+    </div>
+    
    
 </body>
 </html>
